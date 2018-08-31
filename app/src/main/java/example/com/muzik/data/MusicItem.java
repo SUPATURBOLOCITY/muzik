@@ -1,0 +1,39 @@
+package example.com.muzik.data;
+
+import java.io.Serializable;
+
+public class MusicItem implements Serializable {
+
+    private int imageId;
+    private String songName;
+    private String artistName;
+    private int songId;
+
+    public MusicItem(int albumImageId, String songName, String artistName, int songId) {
+        this.imageId = albumImageId;
+        this.songName = songName;
+        this.artistName = artistName;
+        this.songId = songId;
+    }
+
+    public MusicItem(int artistImageId, String artistName) {
+        this.imageId = artistImageId;
+        this.artistName = artistName;
+    }
+
+    public int getImageId() {
+        return imageId;
+    }
+
+    public String getSongName() {
+        return songName;
+    }
+
+    public String getArtistName() {
+        return artistName;
+    }
+
+    public int getSongId() {
+        return songId;
+    }
+}

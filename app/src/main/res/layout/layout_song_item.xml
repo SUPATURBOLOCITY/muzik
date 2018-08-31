@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardPreventCornerOverlap="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="@dimen/dimen_80dp"
+            android:layout_height="@dimen/dimen_80dp"
+            android:layout_marginBottom="@dimen/dimen_2dp"
+            android:layout_marginEnd="@dimen/dimen_4dp"
+            android:layout_marginLeft="@dimen/dimen_4dp"
+            android:layout_marginRight="@dimen/dimen_4dp"
+            android:layout_marginStart="@dimen/dimen_4dp"
+            android:layout_marginTop="@dimen/dimen_2dp"
+            android:contentDescription="@string/content_description"
+            android:scaleType="centerCrop"
+            tools:src="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/songName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen_8dp"
+            android:layout_marginLeft="@dimen/dimen_8dp"
+            android:layout_marginRight="@dimen/dimen_8dp"
+            android:layout_marginStart="@dimen/dimen_8dp"
+            android:layout_marginTop="@dimen/dimen_8dp"
+            android:layout_toEndOf="@id/imageView"
+            android:layout_toLeftOf="@id/play"
+            android:layout_toRightOf="@id/imageView"
+            android:layout_toStartOf="@id/play"
+            android:ellipsize="end"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@android:color/black"
+            tools:text="Song Name" />
+
+        <TextView
+            android:id="@+id/artistName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/songName"
+            android:layout_marginBottom="@dimen/dimen_8dp"
+            android:layout_marginEnd="@dimen/dimen_8dp"
+            android:layout_marginLeft="@dimen/dimen_8dp"
+            android:layout_marginRight="@dimen/dimen_8dp"
+            android:layout_marginStart="@dimen/dimen_8dp"
+            android:layout_toEndOf="@id/imageView"
+            android:layout_toRightOf="@id/imageView"
+            android:ellipsize="end"
+            tools:text="Album/Artist" />
+
+        <Button
+            android:id="@+id/play"
+            android:layout_width="@dimen/dimen_48dp"
+            android:layout_height="@dimen/dimen_48dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/popup"
+            android:layout_toStartOf="@id/popup"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/content_description"
+            android:text="@string/play"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <ImageButton
+            android:id="@+id/popup"
+            android:layout_width="@dimen/dimen_48dp"
+            android:layout_height="@dimen/dimen_48dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/content_description"
+            app:srcCompat="@drawable/ic_more_vert" />
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
